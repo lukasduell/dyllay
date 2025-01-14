@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentProperties DeviceType="Desktop">
+  <Component type="ScriptPanel" id="bg" x="0.0" y="0.0" width="700.0" height="500.0"
+             locked="1"/>
+  <Component type="ScriptSlider" id="knbTime" x="100.0" y="100.0" text="Time"
+             processorId="Delay1" parameterId="DelayTimeLeft"/>
+  <Component type="ScriptSlider" id="knbTone" x="400.0" y="100.0" text="Tone"
+             min="-50.0" middlePosition="0.0" stepSize="0.1" max="50.0"/>
+  <Component type="ScriptSlider" id="knbFbk" x="100.0" y="200.0" text="Feedback"/>
+  <Component type="ScriptSlider" id="knbMod" x="100.0" y="300.0" text="Mod"/>
+  <Component type="ScriptSlider" id="knbShim" x="400.0" y="200.0" text="Shimmer"/>
+  <Component type="ScriptSlider" id="knbMix" x="400.0" y="300.0" text="Mix"
+             processorId="Delay1" parameterId="Mix" max="100.0" stepSize="0.1"
+             defaultValue="20.0"/>
+</ContentProperties>
