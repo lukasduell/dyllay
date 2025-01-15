@@ -9,12 +9,15 @@
         <Processor Type="ScriptProcessor" ID="Interface" Bypassed="0">
           <ChildProcessors/>
           <Content>
-            <Control type="ScriptSlider" id="knbTime" value="0.0"/>
-            <Control type="ScriptSlider" id="knbTone" value="2.775557561562891e-15"/>
+            <Control type="ScriptSlider" id="knbTimeL" value="8.0"/>
+            <Control type="ScriptSlider" id="knbTimeR" value="6.0"/>
             <Control type="ScriptSlider" id="knbFbk" value="0.0"/>
+            <Control type="ScriptSlider" id="knbTone" value="7.450580596923828e-7"/>
             <Control type="ScriptSlider" id="knbMod" value="0.0"/>
             <Control type="ScriptSlider" id="knbShim" value="0.0"/>
             <Control type="ScriptSlider" id="knbMix" value="20.0"/>
+            <Control type="ScriptButton" id="btnStereo" value="1.0"/>
+            <Control type="ScriptButton" id="btnTempoSync" value="1.0"/>
           </Content>
           <UIData Source="dyllayUIData"/>
         </Processor>
@@ -28,9 +31,9 @@
     </Processor>
     <Processor Type="EffectChain" ID="FX" Bypassed="0">
       <ChildProcessors>
-        <Processor Type="Delay" ID="Delay1" Bypassed="0" DelayTimeLeft="0.0" DelayTimeRight="5.0"
-                   FeedbackLeft="0.300000011920929" FeedbackRight="0.300000011920929"
-                   LowPassFreq="20000.0" HiPassFreq="40.0" Mix="20.0" TempoSync="1.0">
+        <Processor Type="Delay" ID="Delay1" Bypassed="0" DelayTimeLeft="8.0" DelayTimeRight="6.0"
+                   FeedbackLeft="0.0" FeedbackRight="0.300000011920929" LowPassFreq="20000.0"
+                   HiPassFreq="40.0" Mix="20.0" TempoSync="1.0">
           <ChildProcessors/>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
