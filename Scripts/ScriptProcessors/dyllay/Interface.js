@@ -3,7 +3,8 @@ Content.makeFrontInterface(700, 500);
 const var bg = Content.getComponent("bg");
 const var knbTimeL = Content.getComponent("knbTimeL");
 const var knbTimeR = Content.getComponent("knbTimeR");
-const var knbFbk = Content.getComponent("knbFbk");
+const var knbFbkL = Content.getComponent("knbFbkL");
+const var knbFbkR = Content.getComponent("knbFbkR");
 const var knbTone = Content.getComponent("knbTone");
 const var knbMod = Content.getComponent("knbMod");
 const var knbShim = Content.getComponent("knbShim");
@@ -11,6 +12,14 @@ const var knbMix = Content.getComponent("knbMix");
 
 const var btnStereo = Content.getComponent("btnStereo");
 const var btnTempoSync = Content.getComponent("btnTempoSync");
+
+
+const var Delay1 = Synth.getEffect("Delay1");
+
+
+
+Console.print(Delay1.Mix);
+
 
 bg.setPaintRoutine(function(g)
 {
@@ -38,10 +47,13 @@ inline function onBtnTempoSyncControl(component, value)
 {
 	if (value) 
 	{
+		Delay1.setAttribute(7, true);
 		knbTimeL.set("mode", "TempoSync");
 		knbTimeR.set("mode", "TempoSync");
+	
 	} else 
 	{
+		Delay1.setAttribute(7, false);
 		knbTimeL.set("mode", "Time");
 		knbTimeR.set("mode", "Time");
 	}
