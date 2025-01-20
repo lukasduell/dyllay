@@ -55,7 +55,7 @@ inline function onKnbFbkLControl(component, value)
 	
 	if (!btnStereo.getValue())
 		{
-			Delay1.setAttribute(3, value);
+			Delay1.setAttribute(3, value/100);
 			knbFbkR.setValue(value);
 		}
 };

@@ -28,14 +28,13 @@
              middlePosition="0.3" filmstripImage="{PROJECT_FOLDER}knobs.png"
              scaleFactor="0.5" numStrips="25.0" width="100.0" height="100.0"
              showTextBox="0" processorId="Simple Reverb1" parameterId="WetLevel"
-             max="0.6" showValuePopup="Left" pluginParameterName="Reverb Mix"
-             isPluginParameter="1" defaultValue="0.1500000059604645"/>
+             max="0.6" pluginParameterName="Reverb Mix" isPluginParameter="1"
+             defaultValue="0.1500000059604645"/>
   <Component type="ScriptSlider" id="knbMix" x="220.0" y="360.0" text="Dry / Wet"
              defaultValue="25.0" filmstripImage="{PROJECT_FOLDER}knobs.png"
              numStrips="25.0" scaleFactor="0.5" width="100.0" height="100.0"
              showTextBox="0" middlePosition="50.0" tooltip="Mix" max="100.0"
-             suffix=" %" stepSize="1.0" showValuePopup="Left" isPluginParameter="1"
-             pluginParameterName="Delay Mix"/>
+             suffix=" %" stepSize="1.0" isPluginParameter="1" pluginParameterName="Delay Mix"/>
   <Component type="ScriptButton" id="btnStereo" x="390.0" y="110.0" text="Stereo"
              width="50.0" height="50.0" filmstripImage="{PROJECT_FOLDER}buttons.png"
              scaleFactor="0.25" numStrips="6.0" defaultValue="1.0" isPluginParameter="1"

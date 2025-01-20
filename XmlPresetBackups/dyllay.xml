@@ -15,8 +15,8 @@
             <Control type="ScriptSlider" id="knbFbkR" value="33.0"/>
             <Control type="ScriptSlider" id="knbRvrb" value="0.1500000059604645"/>
             <Control type="ScriptSlider" id="knbMix" value="25.0"/>
-            <Control type="ScriptButton" id="btnStereo" value="1"/>
-            <Control type="ScriptButton" id="btnTempoSync" value="1"/>
+            <Control type="ScriptButton" id="btnStereo" value="1.0"/>
+            <Control type="ScriptButton" id="btnTempoSync" value="1.0"/>
           </Content>
           <UIData Source="dyllayUIData"/>
         </Processor>
