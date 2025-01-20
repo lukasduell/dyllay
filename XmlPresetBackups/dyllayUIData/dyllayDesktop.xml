@@ -25,10 +25,10 @@
              showValuePopup="Below" max="100.0" stepSize="1.0" middlePosition="50.0"
              suffix=" %" pluginParameterName="Delay Feedback R" isPluginParameter="1"/>
   <Component type="ScriptSlider" id="knbRvrb" x="380.0" y="360.0" text="Tone"
-             middlePosition="0.3" filmstripImage="{PROJECT_FOLDER}knobs.png"
+             middlePosition="0.300000011920929" filmstripImage="{PROJECT_FOLDER}knobs.png"
              scaleFactor="0.5" numStrips="25.0" width="100.0" height="100.0"
              showTextBox="0" processorId="Simple Reverb1" parameterId="WetLevel"
-             max="0.6" pluginParameterName="Reverb Mix" isPluginParameter="1"
+             max="0.6000000238418579" pluginParameterName="Reverb Mix" isPluginParameter="1"
              defaultValue="0.1500000059604645"/>
   <Component type="ScriptSlider" id="knbMix" x="220.0" y="360.0" text="Dry / Wet"
              defaultValue="25.0" filmstripImage="{PROJECT_FOLDER}knobs.png"
@@ -40,7 +40,7 @@
              scaleFactor="0.25" numStrips="6.0" defaultValue="1.0" isPluginParameter="1"
              pluginParameterName="Delay Stereo"/>
   <Component type="ScriptButton" id="btnTempoSync" x="260.0" y="110.0" text="Stereo"
-             width="50.0" height="50.0" defaultValue="1" filmstripImage="{PROJECT_FOLDER}buttons.png"
+             width="50.0" height="50.0" defaultValue="1.0" filmstripImage="{PROJECT_FOLDER}buttons.png"
              scaleFactor="0.25" numStrips="6.0" isPluginParameter="1" pluginParameterName="Delay Tempo Sync"/>
   <Component type="ScriptLabel" id="Label1" x="270.0" y="200.0" text="Dyllay"
              fontName="Zapfino" fontSize="100.0" width="160.0" textColour="4282076801"
@@ -70,5 +70,5 @@
              fontName="Zapfino" fontSize="40.0" width="100.0" textColour="4282076801"
              height="30.0" editable="0"/>
   <Component type="ScriptLabel" id="Label4" x="620.0" y="470.0" text="v0.1.0"
-             width="80.0" textColour="4282076801"/>
+             width="80.0" textColour="4282076801" editable="0"/>
 </ContentProperties>

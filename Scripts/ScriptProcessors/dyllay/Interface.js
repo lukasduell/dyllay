@@ -122,20 +122,22 @@ btnTempoSync.setControlCallback(onBtnTempoSyncControl);
 inline function setTempoSyncMode(knobs, delay)
 {
 	delay.setAttribute(7, 1);
-	delay.setAttribute(0, 8);
-	delay.setAttribute(1, 8);
+	delay.setAttribute(0, 5);
+	delay.setAttribute(1, 5);
 	knobs.forEach(knb => {
 		knb.setMode("TempoSync");
 		knb.set("min", 0);
 		knb.set("max", 18);
 		knb.set("middlePosition", 8);
-		knb.setValue(8);
+		knb.setValue(5);
 	});
 }
 
 inline function setTimeMode(knobs, delay)
 {
 	delay.setAttribute(7, 0);
+	delay.setAttribute(0, 1000);
+	delay.setAttribute(1, 1000);
 	knobs.forEach(knb => {
 		knb.setMode("Time");
 		knb.set("min", 10);
