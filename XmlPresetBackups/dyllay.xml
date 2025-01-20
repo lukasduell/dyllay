@@ -9,14 +9,12 @@
         <Processor Type="ScriptProcessor" ID="Interface" Bypassed="0">
           <ChildProcessors/>
           <Content>
-            <Control type="ScriptSlider" id="knbTimeL" value="8.0"/>
-            <Control type="ScriptSlider" id="knbTimeR" value="8.0"/>
-            <Control type="ScriptSlider" id="knbFbkL" value="50.0"/>
-            <Control type="ScriptSlider" id="knbFbkR" value="50.0"/>
-            <Control type="ScriptSlider" id="knbTone" value="0.0"/>
-            <Control type="ScriptSlider" id="knbMod" value="0.0"/>
-            <Control type="ScriptSlider" id="knbShim" value="0.0"/>
-            <Control type="ScriptSlider" id="knbMix" value="50.0"/>
+            <Control type="ScriptSlider" id="knbTimeL" value="5.0"/>
+            <Control type="ScriptSlider" id="knbTimeR" value="4.0"/>
+            <Control type="ScriptSlider" id="knbFbkL" value="33.0"/>
+            <Control type="ScriptSlider" id="knbFbkR" value="33.0"/>
+            <Control type="ScriptSlider" id="knbRvrb" value="0.1500000059604645"/>
+            <Control type="ScriptSlider" id="knbMix" value="25.0"/>
             <Control type="ScriptButton" id="btnStereo" value="1"/>
             <Control type="ScriptButton" id="btnTempoSync" value="1"/>
           </Content>
@@ -32,9 +30,15 @@
     </Processor>
     <Processor Type="EffectChain" ID="FX" Bypassed="0">
       <ChildProcessors>
-        <Processor Type="Delay" ID="Delay1" Bypassed="0" DelayTimeLeft="8.0" DelayTimeRight="8.0"
-                   FeedbackLeft="0.5" FeedbackRight="0.5" LowPassFreq="20000.0"
-                   HiPassFreq="40.0" Mix="0.5" TempoSync="1.0">
+        <Processor Type="Delay" ID="Delay1" Bypassed="0" DelayTimeLeft="5.0" DelayTimeRight="4.0"
+                   FeedbackLeft="0.3300000131130219" FeedbackRight="0.3300000131130219"
+                   LowPassFreq="20000.0" HiPassFreq="40.0" Mix="0.25" TempoSync="1.0">
+          <ChildProcessors/>
+          <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+        </Processor>
+        <Processor Type="SimpleReverb" ID="Simple Reverb1" Bypassed="0" RoomSize="0.800000011920929"
+                   Damping="0.5" WetLevel="0.1500000059604645" DryLevel="0.8500000238418579"
+                   Width="1.0" FreezeMode="0.1000000014901161">
           <ChildProcessors/>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>

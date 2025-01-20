@@ -5,9 +5,7 @@ const var knbTimeL = Content.getComponent("knbTimeL");
 const var knbTimeR = Content.getComponent("knbTimeR");
 const var knbFbkL = Content.getComponent("knbFbkL");
 const var knbFbkR = Content.getComponent("knbFbkR");
-const var knbTone = Content.getComponent("knbTone");
-const var knbMod = Content.getComponent("knbMod");
-const var knbShim = Content.getComponent("knbShim");
+const var knbRvrb = Content.getComponent("knbRvrb");
 const var knbMix = Content.getComponent("knbMix");
 
 const var btnStereo = Content.getComponent("btnStereo");
@@ -23,15 +21,22 @@ bg.setPaintRoutine(function(g)
 	g.fillRect(this.getLocalBounds(0));
 });
 
-// INIT WITH active TempoSync
+
+// Init with active TempoSync
 setTempoSyncMode(knbsTime, Delay1);
 
 
 // KNOBS
-
+// Time Knobs
 inline function onKnbTimeLControl(component, value)
 {
 	Delay1.setAttribute(0, value);
+	
+	if (!btnStereo.getValue())
+	{
+		Delay1.setAttribute(1, value);
+		knbTimeR.setValue(value);
+	}
 };
 knbTimeL.setControlCallback(onKnbTimeLControl);
 
@@ -47,8 +52,15 @@ knbTimeR.setControlCallback(onKnbTimeRControl);
 inline function onKnbFbkLControl(component, value)
 {
 	Delay1.setAttribute(2, value/100);
+	
+	if (!btnStereo.getValue())
+		{
+			Delay1.setAttribute(3, value);
+			knbFbkR.setValue(value);
+		}
 };
 knbFbkL.setControlCallback(onKnbFbkLControl);
+
 
 inline function onKnbFbkRControl(component, value)
 {
@@ -66,20 +78,24 @@ knbMix.setControlCallback(onKnbMixControl);
 
 
 
-
 // BUTTONS
-
 inline function onBtnStereoControl(component, value)
 {
-	if (value == 1) // STEREO
+	if (!!value) // STEREO
 	{
 		knbTimeR.set("enabled", true);
 		knbFbkR.set("enabled", true);
 	}
 	else // MONO
 	{
-	knbTimeR.set("enabled", false);
-	knbFbkR.set("enabled", false);
+		Delay1.setAttribute(1, Delay1.getAttribute(0));
+		Delay1.setAttribute(3, Delay1.getAttribute(2));
+		
+		knbTimeR.set("enabled", false);
+		knbFbkR.set("enabled", false);
+		
+		knbTimeR.setValue(knbTimeL.getValue());
+		knbFbkR.setValue(knbFbkL.getValue());
 	}
 };
 btnStereo.setControlCallback(onBtnStereoControl);
@@ -100,12 +116,14 @@ btnTempoSync.setControlCallback(onBtnTempoSyncControl);
 
 
 
-// Hilfsfunktionen
+// Helper functions
 
-//knobs expects an Array, fx expects a delay effect
+//knobs expects array, fx expects delay effect
 inline function setTempoSyncMode(knobs, delay)
 {
 	delay.setAttribute(7, 1);
+	delay.setAttribute(0, 8);
+	delay.setAttribute(1, 8);
 	knobs.forEach(knb => {
 		knb.setMode("TempoSync");
 		knb.set("min", 0);
@@ -126,9 +144,6 @@ inline function setTimeMode(knobs, delay)
 		knb.setValue(1000);
 	});
 }
-
-
-
 
 function onNoteOn()
 {

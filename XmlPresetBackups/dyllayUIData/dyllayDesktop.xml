@@ -6,77 +6,70 @@
   <Component type="ScriptSlider" id="knbTimeL" x="90.0" y="50.0" text="Time Left"
              filmstripImage="{PROJECT_FOLDER}knobs.png" width="100.0" height="100.0"
              numStrips="25.0" scaleFactor="0.5" mode="TempoSync" max="18"
-             showTextBox="0" showValuePopup="Left" middlePosition="8.0" stepSize="1.0"
-             defaultValue="8.0"/>
+             showTextBox="0" showValuePopup="Below" middlePosition="8.0" stepSize="1.0"
+             defaultValue="5.0" isPluginParameter="1" pluginParameterName="Delay Time L"/>
   <Component type="ScriptSlider" id="knbTimeR" x="510.0" y="60.0" text="Time Right"
              numStrips="25.0" filmstripImage="{PROJECT_FOLDER}knobs.png" width="100.0"
-             height="100.0" scaleFactor="0.5" showTextBox="0" mode="TempoSync"
-             max="18" stepSize="1.0" showValuePopup="Left" middlePosition="8.0"
-             defaultValue="8.0"/>
-  <Component type="ScriptSlider" id="knbFbkL" x="90.0" y="210.0" text="Feedback L"
+             height="100.0" scaleFactor="0.5" mode="TempoSync" max="18" stepSize="1.0"
+             middlePosition="8.0" defaultValue="4.0" showTextBox="0" showValuePopup="Below"
+             isPluginParameter="1" pluginParameterName="Delay Time R"/>
+  <Component type="ScriptSlider" id="knbFbkL" x="90.0" y="230.0" text="Feedback L"
              width="100.0" height="100.0" filmstripImage="{PROJECT_FOLDER}knobs.png"
-             scaleFactor="0.5" numStrips="25.0" defaultValue="50.0" showTextBox="0"
-             showValuePopup="Left" suffix=" %" stepSize="1.0" max="100.0"
-             middlePosition="50.0"/>
-  <Component type="ScriptSlider" id="knbFbkR" x="510.0" y="210.0" text="Feedback R"
+             scaleFactor="0.5" numStrips="25.0" defaultValue="33.0" showTextBox="0"
+             showValuePopup="Below" suffix=" %" stepSize="1.0" max="100.0"
+             middlePosition="50.0" pluginParameterName="Delay Feedback L"
+             isPluginParameter="1"/>
+  <Component type="ScriptSlider" id="knbFbkR" x="510.0" y="230.0" text="Feedback R"
              width="100.0" height="100.0" filmstripImage="{PROJECT_FOLDER}knobs.png"
-             scaleFactor="0.5" numStrips="25.0" showTextBox="0" defaultValue="50.0"
-             showValuePopup="Left" max="100.0" stepSize="1.0" middlePosition="50.0"
-             suffix=" %"/>
-  <Component type="ScriptSlider" id="knbTone" x="510.0" y="370.0" text="Tone"
-             min="-50.0" middlePosition="0.0" stepSize="0.1000000014901161"
-             max="50.0" filmstripImage="{PROJECT_FOLDER}knobs.png" scaleFactor="0.5"
-             numStrips="25.0" width="100.0" height="100.0" showTextBox="0"
-             showValuePopup="Left"/>
-  <Component type="ScriptSlider" id="knbMod" x="90.0" y="370.0" text="Mod"
-             width="100.0" height="100.0" filmstripImage="{PROJECT_FOLDER}knobs.png"
-             scaleFactor="0.5" numStrips="25.0" showTextBox="0" showValuePopup="Left"/>
-  <Component type="ScriptSlider" id="knbShim" x="510.0" y="210.0" text="Shimmer"
-             filmstripImage="{PROJECT_FOLDER}knobs.png" scaleFactor="0.5"
-             numStrips="25.0" width="100.0" height="100.0" showTextBox="0"
-             visible="0"/>
-  <Component type="ScriptSlider" id="knbMix" x="300.0" y="370.0" text="Dry / Wet"
-             defaultValue="50.0" filmstripImage="{PROJECT_FOLDER}knobs.png"
+             scaleFactor="0.5" numStrips="25.0" showTextBox="0" defaultValue="33.0"
+             showValuePopup="Below" max="100.0" stepSize="1.0" middlePosition="50.0"
+             suffix=" %" pluginParameterName="Delay Feedback R" isPluginParameter="1"/>
+  <Component type="ScriptSlider" id="knbRvrb" x="380.0" y="360.0" text="Tone"
+             middlePosition="0.3" filmstripImage="{PROJECT_FOLDER}knobs.png"
+             scaleFactor="0.5" numStrips="25.0" width="100.0" height="100.0"
+             showTextBox="0" processorId="Simple Reverb1" parameterId="WetLevel"
+             max="0.6" showValuePopup="Left" pluginParameterName="Reverb Mix"
+             isPluginParameter="1" defaultValue="0.1500000059604645"/>
+  <Component type="ScriptSlider" id="knbMix" x="220.0" y="360.0" text="Dry / Wet"
+             defaultValue="25.0" filmstripImage="{PROJECT_FOLDER}knobs.png"
              numStrips="25.0" scaleFactor="0.5" width="100.0" height="100.0"
-             showTextBox="0" middlePosition="50.0" showValuePopup="Left" tooltip="Mix"
-             max="100.0" suffix=" %" stepSize="1.0"/>
-  <Component type="ScriptButton" id="btnStereo" x="390.0" y="90.0" text="Stereo"
+             showTextBox="0" middlePosition="50.0" tooltip="Mix" max="100.0"
+             suffix=" %" stepSize="1.0" showValuePopup="Left" isPluginParameter="1"
+             pluginParameterName="Delay Mix"/>
+  <Component type="ScriptButton" id="btnStereo" x="390.0" y="110.0" text="Stereo"
              width="50.0" height="50.0" filmstripImage="{PROJECT_FOLDER}buttons.png"
-             scaleFactor="0.25" numStrips="6.0" defaultValue="1.0"/>
-  <Component type="ScriptButton" id="btnTempoSync" x="260.0" y="90.0" text="Stereo"
+             scaleFactor="0.25" numStrips="6.0" defaultValue="1.0" isPluginParameter="1"
+             pluginParameterName="Delay Stereo"/>
+  <Component type="ScriptButton" id="btnTempoSync" x="260.0" y="110.0" text="Stereo"
              width="50.0" height="50.0" defaultValue="1" filmstripImage="{PROJECT_FOLDER}buttons.png"
-             scaleFactor="0.25" numStrips="6.0"/>
+             scaleFactor="0.25" numStrips="6.0" isPluginParameter="1" pluginParameterName="Delay Tempo Sync"/>
   <Component type="ScriptLabel" id="Label1" x="270.0" y="200.0" text="Dyllay"
              fontName="Zapfino" fontSize="100.0" width="160.0" textColour="4282076801"
              height="100.0" editable="0" locked="1"/>
   <Component type="ScriptLabel" id="Label2" x="90.0" y="20.0" text="Time L"
              fontName="Zapfino" fontSize="40.0" width="100.0" textColour="4282076801"
              height="30.0" editable="0"/>
-  <Component type="ScriptLabel" id="Label3" x="90.0" y="180.0" text="Feedback L"
+  <Component type="ScriptLabel" id="Label3" x="90.0" y="200.0" text="Feedback L"
              fontName="Zapfino" fontSize="40.0" width="100.0" textColour="4282076801"
              height="30.0" editable="0"/>
-  <Component type="ScriptLabel" id="Label4" x="90.0" y="340.0" text="Mod"
+  <Component type="ScriptLabel" id="Label6" x="220.0" y="330.0" text="Dry / Wet"
              fontName="Zapfino" fontSize="40.0" width="100.0" textColour="4282076801"
              height="30.0" editable="0"/>
-  <Component type="ScriptLabel" id="Label5" x="510.0" y="180.0" text="Shimmer"
-             fontName="Zapfino" fontSize="40.0" width="100.0" textColour="4282076801"
-             height="30.0" visible="0"/>
-  <Component type="ScriptLabel" id="Label6" x="300.0" y="340.0" text="Dry / Wet"
-             fontName="Zapfino" fontSize="40.0" width="100.0" textColour="4282076801"
-             height="30.0" editable="0"/>
-  <Component type="ScriptLabel" id="Label7" x="510.0" y="340.0" text="Tone"
+  <Component type="ScriptLabel" id="Label7" x="380.0" y="330.0" text="Reverb"
              fontName="Zapfino" fontSize="40.0" width="100.0" textColour="4282076801"
              height="30.0" editable="0"/>
   <Component type="ScriptLabel" id="Label8" x="510.0" y="30.0" text="Time R"
              fontName="Zapfino" fontSize="40.0" width="100.0" height="30.0"
              textColour="4282076801" editable="0"/>
-  <Component type="ScriptLabel" id="Label9" x="230.0" y="60.0" text="Tempo Sync"
+  <Component type="ScriptLabel" id="Label9" x="230.0" y="80.0" text="Tempo Sync"
              fontName="Zapfino" fontSize="40.0" width="110.0" height="30.0"
              textColour="4282076801" editable="0"/>
-  <Component type="ScriptLabel" id="Label10" x="360.0" y="60.0" text="Stereo"
+  <Component type="ScriptLabel" id="Label10" x="360.0" y="80.0" text="Stereo"
              fontName="Zapfino" fontSize="40.0" width="110.0" height="30.0"
              textColour="4282076801" editable="0"/>
-  <Component type="ScriptLabel" id="Label11" x="510.0" y="180.0" text="Feedback R"
+  <Component type="ScriptLabel" id="Label11" x="510.0" y="200.0" text="Feedback R"
              fontName="Zapfino" fontSize="40.0" width="100.0" textColour="4282076801"
              height="30.0" editable="0"/>
+  <Component type="ScriptLabel" id="Label4" x="620.0" y="470.0" text="v0.1.0"
+             width="80.0" textColour="4282076801"/>
 </ContentProperties>
