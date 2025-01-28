@@ -1,4 +1,8 @@
 .DS_Store
-/Binaries
-/Presets
-/Samples
+Binaries/
+Documentation/
+Expansions/
+Packaging/
+PooledResources/
+Presets/
+Samples/
