@@ -10,13 +10,11 @@
           <ChildProcessors/>
           <Content>
             <Control type="ScriptSlider" id="knbTimeL" value="5.0"/>
-            <Control type="ScriptSlider" id="knbTimeR" value="5.0"/>
+            <Control type="ScriptSlider" id="knbTimeR" value="4.0"/>
             <Control type="ScriptSlider" id="knbFbkL" value="33.0"/>
             <Control type="ScriptSlider" id="knbFbkR" value="33.0"/>
             <Control type="ScriptSlider" id="knbRvrb" value="0.1500000059604645"/>
             <Control type="ScriptSlider" id="knbMix" value="25.0"/>
-            <Control type="ScriptSlider" id="knbLowCut" value="200.0"/>
-            <Control type="ScriptSlider" id="knbHiCut" value="2000.0"/>
             <Control type="ScriptButton" id="btnStereo" value="1.0"/>
             <Control type="ScriptButton" id="btnTempoSync" value="1.0"/>
           </Content>
@@ -32,7 +30,7 @@
     </Processor>
     <Processor Type="EffectChain" ID="FX" Bypassed="0">
       <ChildProcessors>
-        <Processor Type="Delay" ID="Delay1" Bypassed="0" DelayTimeLeft="5.0" DelayTimeRight="5.0"
+        <Processor Type="Delay" ID="Delay1" Bypassed="0" DelayTimeLeft="5.0" DelayTimeRight="4.0"
                    FeedbackLeft="0.3300000131130219" FeedbackRight="0.3300000131130219"
                    LowPassFreq="2000.0" HiPassFreq="200.0" Mix="0.25" TempoSync="1.0">
           <ChildProcessors/>

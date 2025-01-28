@@ -1,3 +1,20 @@
+/*
+    Copyright 2025 Lukas Düll
+
+    This file is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This file is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with This file. If not, see <http://www.gnu.org/licenses/>.
+*/
+
 Content.makeFrontInterface(800, 700);
 
 const var bg = Content.getComponent("bg");
@@ -7,8 +24,6 @@ const var knbFbkL = Content.getComponent("knbFbkL");
 const var knbFbkR = Content.getComponent("knbFbkR");
 const var knbMix = Content.getComponent("knbMix");
 const var knbRvrb = Content.getComponent("knbRvrb");
-//const var knbLowCut = Content.getComponent("knbLowCut");
-//const var knbHiCut = Content.getComponent("knbHiCut");
 
 const var btnStereo = Content.getComponent("btnStereo");
 const var btnTempoSync = Content.getComponent("btnTempoSync");
@@ -79,26 +94,6 @@ inline function onKnbMixControl(component, value)
 knbMix.setControlCallback(onKnbMixControl);
 
 
-// Low & Hi Cuts
-
-/*
-inline function onKnbLowCutControl(component, value)
-{
-	Delay1.setAttribute(5, value);
-};
-
-knbLowCut.setControlCallback(onKnbLowCutControl);
-
-
-inline function onKnbHiCutControl(component, value)
-{
-	Delay1.setAttribute(4, value);
-};
-
-knbHiCut.setControlCallback(onKnbHiCutControl);
-*/
-
-
 // BUTTONS
 inline function onBtnStereoControl(component, value)
 {
@@ -136,7 +131,6 @@ inline function onBtnTempoSyncControl(component, value)
 btnTempoSync.setControlCallback(onBtnTempoSyncControl);
 
 
-
 // Helper functions
 
 //knobs expects array, fx expects delay effect
@@ -167,7 +161,6 @@ inline function setTimeMode(knobs, delay)
 		knb.setValue(1000);
 	});
 }
-
 function onNoteOn()
 {
 	
