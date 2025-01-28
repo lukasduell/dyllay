@@ -1,12 +1,14 @@
-Content.makeFrontInterface(700, 500);
+Content.makeFrontInterface(800, 700);
 
 const var bg = Content.getComponent("bg");
 const var knbTimeL = Content.getComponent("knbTimeL");
 const var knbTimeR = Content.getComponent("knbTimeR");
 const var knbFbkL = Content.getComponent("knbFbkL");
 const var knbFbkR = Content.getComponent("knbFbkR");
-const var knbRvrb = Content.getComponent("knbRvrb");
 const var knbMix = Content.getComponent("knbMix");
+const var knbRvrb = Content.getComponent("knbRvrb");
+//const var knbLowCut = Content.getComponent("knbLowCut");
+//const var knbHiCut = Content.getComponent("knbHiCut");
 
 const var btnStereo = Content.getComponent("btnStereo");
 const var btnTempoSync = Content.getComponent("btnTempoSync");
@@ -17,7 +19,7 @@ const var knbsTime = [knbTimeL, knbTimeR];
 
 bg.setPaintRoutine(function(g)
 {
-	g.setGradientFill([0xffccddff, 0, 0, 0xffbbccdd, 0, 500]);
+	g.setGradientFill([0xffccddff, 0, 0, 0xffbbccdd, 0, 700]);
 	g.fillRect(this.getLocalBounds(0));
 });
 
@@ -76,6 +78,25 @@ inline function onKnbMixControl(component, value)
 };
 knbMix.setControlCallback(onKnbMixControl);
 
+
+// Low & Hi Cuts
+
+/*
+inline function onKnbLowCutControl(component, value)
+{
+	Delay1.setAttribute(5, value);
+};
+
+knbLowCut.setControlCallback(onKnbLowCutControl);
+
+
+inline function onKnbHiCutControl(component, value)
+{
+	Delay1.setAttribute(4, value);
+};
+
+knbHiCut.setControlCallback(onKnbHiCutControl);
+*/
 
 
 // BUTTONS
