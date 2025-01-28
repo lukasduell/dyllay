@@ -1,4 +1,5 @@
 .DS_Store
+user_info.xml
 Binaries/
 Documentation/
 Expansions/
@@ -6,4 +7,3 @@ Packaging/
 PooledResources/
 Presets/
 Samples/
-user_info.xml

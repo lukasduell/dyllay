@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ProjectSettings>
-  <Name value="dyllay"/>
-  <Version value="0.1.1"/>
+  <Name value="Dyllay"/>
+  <Version value="0.1.2"/>
   <Description value=""/>
-  <BundleIdentifier value="com.myCompany.product"/>
-  <PluginCode value="Abcd"/>
+  <BundleIdentifier value="com.ldAudio.product"/>
+  <PluginCode value="Dyll"/>
   <EmbedAudioFiles value="Yes"/>
   <EmbedImageFiles value="Yes"/>
   <SupportFullDynamicsHLAC value="No"/>
