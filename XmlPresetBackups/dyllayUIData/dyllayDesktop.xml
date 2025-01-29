@@ -72,6 +72,6 @@
   <Component type="ScriptLabel" id="labelStereo" x="400.0" y="90.0" text="Stereo"
              fontName="Zapfino" fontSize="40.0" width="110.0" height="30.0"
              textColour="4282076801" editable="0"/>
-  <Component type="ScriptLabel" id="labelVersion" x="720.0" y="670.0" text="v0.1.1"
+  <Component type="ScriptLabel" id="labelVersion" x="720.0" y="670.0" text="v0.1.2"
              width="80.0" textColour="4282076801" editable="0" height="28.0"/>
 </ContentProperties>
