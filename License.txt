@@ -1,4 +1,4 @@
-dyllay is a delay effects plugins for usage as .vst3 or .au in DAWs. - The software and its source code are licensed under the GNU General Public License (GPLv3.0).
+Dyllay is a delay effects plugins for usage as .vst3 or .au in DAWs. - The software and its source code are licensed under the GNU General Public License (GPLv3.0).
 
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
