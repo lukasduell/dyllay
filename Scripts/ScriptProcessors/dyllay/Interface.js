@@ -17,6 +17,8 @@
 
 Content.makeFrontInterface(700, 600);
 
+include("ZoomHandler.js");
+
 const var bg = Content.getComponent("bg");
 const var knbTimeL = Content.getComponent("knbTimeL");
 const var knbTimeR = Content.getComponent("knbTimeR");
