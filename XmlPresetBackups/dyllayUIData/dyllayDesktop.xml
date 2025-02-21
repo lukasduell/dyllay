@@ -72,6 +72,6 @@
   <Component type="ScriptLabel" id="labelVersion" x="620.0" y="560.0" text="v0.1.3"
              width="70.0" textColour="4282076801" editable="0" height="30.0"
              fontSize="12.0"/>
-  <Component type="ScriptPanel" id="pnlZoom" x="680.0" y="580.0" width="20.0"
-             height="20.0" allowCallbacks="Clicks, Hover &amp; Dragging"/>
+  <Component type="ScriptPanel" id="pnlZoom" x="685.0" y="585.0" width="15.0"
+             height="15.0" allowCallbacks="Clicks, Hover &amp; Dragging"/>
 </ContentProperties>
