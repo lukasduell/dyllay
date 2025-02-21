@@ -15,7 +15,7 @@
     along with This file. If not, see <http://www.gnu.org/licenses/>.
 */
 
-Content.makeFrontInterface(800, 700);
+Content.makeFrontInterface(700, 600);
 
 const var bg = Content.getComponent("bg");
 const var knbTimeL = Content.getComponent("knbTimeL");
