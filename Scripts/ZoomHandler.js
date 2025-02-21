@@ -21,8 +21,8 @@ namespace ZoomHandler
 	
 	ZoomPanel.setPaintRoutine(function(g)
 	{
-		g.setColour(Colours.withAlpha(Colours.white, (this.data.hover && this.data.allowDrag) ? 0.7 : 0.3));
-		g.fillPath(draggerPath, [0, 0, 20, 20]);
+		g.setColour(Colours.withAlpha(0xff3b4e81, (this.data.hover && this.data.allowDrag) ? 0.6 : 0.3));
+		g.fillPath(draggerPath, [0, 0, 15, 15]);
 	});
 	
 	inline function allowZoom(panel, on)
