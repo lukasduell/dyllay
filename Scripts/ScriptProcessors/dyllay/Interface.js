@@ -49,11 +49,11 @@ setTempoSyncMode(knbsTime, Delay1);
 // Time Knobs
 inline function onKnbTimeLControl(component, value)
 {
-	Delay1.setAttribute(0, value);
+	Delay1.setAttribute(Delay1.DelayTimeLeft, value);
 	
 	if (!btnStereo.getValue())
 	{
-		Delay1.setAttribute(1, value);
+		Delay1.setAttribute(Delay1.DelayTimeRight, value);
 		knbTimeR.setValue(value);
 	}
 };
@@ -70,20 +70,20 @@ knbTimeR.setControlCallback(onKnbTimeRControl);
 // Feedback Knobs
 inline function onKnbFbkLControl(component, value)
 {
-	Delay1.setAttribute(2, value/100);
+	Delay1.setAttribute(Delay1.FeedbackLeft, value/100);
 	
 	if (!btnStereo.getValue())
 		{
-			Delay1.setAttribute(3, value/100);
+			Delay1.setAttribute(Delay1.FeedbackRight, value/100);
 			knbFbkR.setValue(value);
 		}
 };
-knbFbkL.setControlCallback(onKnbFbkLControl);
+knbFbkL.setControlCallback(onKnbFbkLControl);	
 
 
 inline function onKnbFbkRControl(component, value)
 {
-	Delay1.setAttribute(3, value/100);
+	Delay1.setAttribute(Delay1.FeedbackRight, value/100);
 };
 knbFbkR.setControlCallback(onKnbFbkRControl);
 
@@ -91,7 +91,7 @@ knbFbkR.setControlCallback(onKnbFbkRControl);
 // Dry / Wet - Mix Knob
 inline function onKnbMixControl(component, value)
 {
-	Delay1.setAttribute(6, value/100);
+	Delay1.setAttribute(Delay1.Mix, value/100);
 };
 knbMix.setControlCallback(onKnbMixControl);
 
@@ -106,8 +106,8 @@ inline function onBtnStereoControl(component, value)
 	}
 	else // MONO
 	{
-		Delay1.setAttribute(1, Delay1.getAttribute(0));
-		Delay1.setAttribute(3, Delay1.getAttribute(2));
+		Delay1.setAttribute(Delay1.DelayTimeRight, Delay1.getAttribute(Delay1.DelayTimeLeft));
+		Delay1.setAttribute(Delay1.FeedbackRight, Delay1.getAttribute(Delay1.FeedbackLeft));
 		
 		knbTimeR.set("enabled", false);
 		knbFbkR.set("enabled", false);
@@ -138,9 +138,9 @@ btnTempoSync.setControlCallback(onBtnTempoSyncControl);
 //knobs expects array, fx expects delay effect
 inline function setTempoSyncMode(knobs, delay)
 {
-	delay.setAttribute(7, 1);
-	delay.setAttribute(0, 5);
-	delay.setAttribute(1, 5);
+	delay.setAttribute(delay.TempoSync, 1);
+	delay.setAttribute(delay.DelayTimeLeft, 5);
+	delay.setAttribute(delay.DelayTimeRight, 5);
 	knobs.forEach(knb => {
 		knb.setMode("TempoSync");
 		knb.set("min", 0);
@@ -152,9 +152,9 @@ inline function setTempoSyncMode(knobs, delay)
 
 inline function setTimeMode(knobs, delay)
 {
-	delay.setAttribute(7, 0);
-	delay.setAttribute(0, 1000);
-	delay.setAttribute(1, 1000);
+	delay.setAttribute(delay.TempoSync, 0);
+	delay.setAttribute(delay.DelayTimeLeft, 1000);
+	delay.setAttribute(delay.DelayTimeRight, 1000);
 	knobs.forEach(knb => {
 		knb.setMode("Time");
 		knb.set("min", 10);

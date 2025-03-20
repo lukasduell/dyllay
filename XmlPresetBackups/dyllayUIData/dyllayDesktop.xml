@@ -5,36 +5,39 @@
              locked="1"/>
   <Component type="ScriptSlider" id="knbTimeL" x="70.0" y="40.0" text="Time Left"
              filmstripImage="{PROJECT_FOLDER}knobs.png" width="140.0" height="140.0"
-             numStrips="25.0" scaleFactor="0.7" mode="TempoSync" max="18"
-             showTextBox="0" showValuePopup="Below" middlePosition="8.0" stepSize="1.0"
-             defaultValue="5.0" isPluginParameter="1" pluginParameterName="Delay Time L"/>
+             numStrips="25.0" scaleFactor="0.699999988079071" mode="TempoSync"
+             max="18" showTextBox="0" showValuePopup="Below" middlePosition="8.0"
+             stepSize="1.0" defaultValue="5.0" isPluginParameter="1" pluginParameterName="Delay Time L"/>
   <Component type="ScriptSlider" id="knbTimeR" x="490.0" y="40.0" text="Time Right"
              numStrips="25.0" filmstripImage="{PROJECT_FOLDER}knobs.png" width="140.0"
-             height="140.0" scaleFactor="0.7" mode="TempoSync" max="18" stepSize="1.0"
-             middlePosition="8.0" defaultValue="4.0" showTextBox="0" showValuePopup="Below"
-             isPluginParameter="1" pluginParameterName="Delay Time R"/>
+             height="140.0" scaleFactor="0.699999988079071" mode="TempoSync"
+             max="18" stepSize="1.0" middlePosition="8.0" defaultValue="4.0"
+             showTextBox="0" showValuePopup="Below" isPluginParameter="1"
+             pluginParameterName="Delay Time R"/>
   <Component type="ScriptSlider" id="knbFbkL" x="40.0" y="250.0" text="Feedback L"
              width="140.0" height="140.0" filmstripImage="{PROJECT_FOLDER}knobs.png"
-             scaleFactor="0.7" numStrips="25.0" defaultValue="33.0" showTextBox="0"
-             showValuePopup="Below" suffix=" %" stepSize="1.0" max="100.0"
-             middlePosition="50.0" pluginParameterName="Delay Feedback L"
+             scaleFactor="0.699999988079071" numStrips="25.0" defaultValue="33.0"
+             showTextBox="0" showValuePopup="Below" suffix=" %" stepSize="1.0"
+             max="100.0" middlePosition="50.0" pluginParameterName="Delay Feedback L"
              isPluginParameter="1"/>
   <Component type="ScriptSlider" id="knbFbkR" x="520.0" y="250.0" text="Feedback R"
              width="140.0" height="140.0" filmstripImage="{PROJECT_FOLDER}knobs.png"
-             scaleFactor="0.7" numStrips="25.0" showTextBox="0" defaultValue="33.0"
-             showValuePopup="Below" max="100.0" stepSize="1.0" middlePosition="50.0"
-             suffix=" %" pluginParameterName="Delay Feedback R" isPluginParameter="1"/>
+             scaleFactor="0.699999988079071" numStrips="25.0" showTextBox="0"
+             defaultValue="33.0" showValuePopup="Below" max="100.0" stepSize="1.0"
+             middlePosition="50.0" suffix=" %" pluginParameterName="Delay Feedback R"
+             isPluginParameter="1"/>
   <Component type="ScriptSlider" id="knbRvrb" x="380.0" y="420.0" text="Reverb Mix"
              middlePosition="0.300000011920929" filmstripImage="{PROJECT_FOLDER}knobs.png"
-             scaleFactor="0.7" numStrips="25.0" width="140.0" height="140.0"
-             showTextBox="0" processorId="Simple Reverb1" parameterId="WetLevel"
+             scaleFactor="0.699999988079071" numStrips="25.0" width="140.0"
+             height="140.0" showTextBox="0" processorId="Simple Reverb1" parameterId="WetLevel"
              max="0.6000000238418579" pluginParameterName="Reverb Mix" isPluginParameter="1"
              defaultValue="0.1500000059604645"/>
   <Component type="ScriptSlider" id="knbMix" x="180.0" y="420.0" text="Dry / Wet"
              defaultValue="25.0" filmstripImage="{PROJECT_FOLDER}knobs.png"
-             numStrips="25.0" scaleFactor="0.7" width="140.0" height="140.0"
-             showTextBox="0" middlePosition="50.0" tooltip="Mix" max="100.0"
-             suffix=" %" stepSize="1.0" isPluginParameter="1" pluginParameterName="Delay Mix"/>
+             numStrips="25.0" scaleFactor="0.699999988079071" width="140.0"
+             height="140.0" showTextBox="0" middlePosition="50.0" tooltip="Mix"
+             max="100.0" suffix=" %" stepSize="1.0" isPluginParameter="1"
+             pluginParameterName="Delay Mix"/>
   <Component type="ScriptButton" id="btnStereo" x="380.0" y="120.0" text="Stereo"
              width="50.0" height="50.0" filmstripImage="{PROJECT_FOLDER}buttons.png"
              scaleFactor="0.25" numStrips="6.0" defaultValue="1.0" isPluginParameter="1"
